@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -30,5 +29,16 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    #--- agregar este bloque
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID', '863677718303988 '),
+        'client_secret' => env(
+            'FACEBOOK_CLIENT_SECRET',
+            'a0032bbd71f2d131dcc423f0460f9281'
+        ),
+        'redirect' => env(
+            'FACEBOOK_REDIRECT',
+            'http://localhost:8888/login/facebook/callback'
+        ),
+    ],
 ];

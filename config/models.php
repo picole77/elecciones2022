@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Configurations
@@ -13,7 +12,6 @@ return [
     */
 
     '*' => [
-
         /*
         |--------------------------------------------------------------------------
         | Model Files Location
@@ -228,9 +226,7 @@ return [
         |
         */
 
-        'hidden' => [
-            '*secret*', '*password', '*token',
-        ],
+        'hidden' => ['*secret*', '*password', '*token'],
 
         /*
         |--------------------------------------------------------------------------
@@ -279,9 +275,7 @@ return [
         |
         */
 
-        'except' => [
-            'migrations',
-        ],
+        'except' => ['migrations'],
 
         /*
         |--------------------------------------------------------------------------
@@ -337,9 +331,7 @@ return [
         |     'billing_invoices' => 'Invoice',
         */
 
-        'model_names' => [
-
-        ],
+        'model_names' => [],
 
         /*
         |--------------------------------------------------------------------------
@@ -372,23 +364,23 @@ return [
         // 'relation_name_strategy' => 'foreign_key',
 
         /*
-         |--------------------------------------------------------------------------
-         | Determines need or not to generate constants with properties names like
-         |
-         | ...
-         | const AGE = 'age';
-         | const USER_NAME = 'user_name';
-         | ...
-         |
-         | that later can be used in QueryBuilder like
-         |
-         | ...
-         | $builder->select([User::USER_NAME])->where(User::AGE, '<=', 18);
-         | ...
-         |
-         | that helps to avoid typos in strings when typing field names and allows to use
-         | code competition with available model's field names.
-         */
+        |--------------------------------------------------------------------------
+        | Determines need or not to generate constants with properties names like
+        |
+        | ...
+        | const AGE = 'age';
+        | const USER_NAME = 'user_name';
+        | ...
+        |
+        | that later can be used in QueryBuilder like
+        |
+        | ...
+        | $builder->select([User::USER_NAME])->where(User::AGE, '<=', 18);
+        | ...
+        |
+        | that helps to avoid typos in strings when typing field names and allows to use
+        | code competition with available model's field names.
+        */
         'with_property_constants' => false,
 
         /*
@@ -409,14 +401,12 @@ return [
         | You can enable pluralization for certain tables
         |
         */
-        'override_pluralize_for' => [
-
-        ],
+        'override_pluralize_for' => [],
         /*
         |--------------------------------------------------------------------------
         | Move $fillable property to base files
         |--------------------------------------------------------------------------
-        | When base_files is true you can set fillable_in_base_files to true 
+        | When base_files is true you can set fillable_in_base_files to true
         | if you want the $fillable to be generated in base files
         |
         */
@@ -489,18 +479,18 @@ return [
     |
     */
 
-//    'connections' => [
-//        'read_only_external' => [
-//            'parent' => \App\Models\ReadOnlyModel::class,
-//            'connection' => true,
-//            'users' => [
-//                'connection' => false,
-//            ],
-//            'my_other_database' => [
-//                'password_resets' => [
-//                    'connection' => false,
-//                ]
-//            ]
-//        ],
-//    ],
+    //    'connections' => [
+    //        'read_only_external' => [
+    //            'parent' => \App\Models\ReadOnlyModel::class,
+    //            'connection' => true,
+    //            'users' => [
+    //                'connection' => false,
+    //            ],
+    //            'my_other_database' => [
+    //                'password_resets' => [
+    //                    'connection' => false,
+    //                ]
+    //            ]
+    //        ],
+    //    ],
 ];
